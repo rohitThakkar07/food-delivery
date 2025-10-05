@@ -1,0 +1,98 @@
+/* myOrders.css */
+
+.my-orders {
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-orders h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Orders container */
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Single order card */
+.order-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  gap: 20px;
+}
+
+/* Left side - icon + details */
+.order-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.parcel-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Order info */
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-items {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.order-amount,
+.order-items-count {
+  font-size: 12px;
+  color: #666;
+}
+
+.order-status {
+  font-size: 12px;
+  color: #e67e22;
+}
+
+/* Track order button */
+.track-btn {
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.track-btn:hover {
+  background-color: #e63946;
+  color: #fff;
+  border-color: #e63946;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .track-btn {
+    margin-top: 10px;
+  }
+}

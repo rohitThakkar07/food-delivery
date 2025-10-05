@@ -1,0 +1,34 @@
+
+*{
+  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  background-color: #fefefe;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+hr{
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+/* .app-content{
+  display: flex;
+}
+.app-content > .routes, 
+.app-content > .page {
+  flex: 1;
+  padding: 2rem;
+}
+.app-content {
+  display: flex;
+  min-height: calc(100vh - 61px); /* adjust for navbar + hr */
+/* }  */

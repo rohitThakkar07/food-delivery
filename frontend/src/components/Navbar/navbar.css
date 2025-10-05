@@ -1,0 +1,193 @@
+/* navbar.css */
+
+.navbar {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.navbar-menu li:hover {
+    color: #e63946;
+}
+
+.navbar-menu li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e63946;
+    transition: width 0.3s;
+}
+
+.navbar-menu li:hover::after {
+    width: 100%;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.navbar-right img:hover {
+    transform: scale(1.1);
+}
+
+/* Basket Icon with Dot and Button */
+.navbar-search-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    top: -3px;
+    right: 90px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Sign In Button */
+.navbar-search-icon button {
+    padding: 8px 16px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-search-icon button:hover {
+    background-color: #d62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .navbar-right {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+
+/* Profile Section */
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-profile img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.navbar-profile img:hover {
+    transform: scale(1.05);
+}
+
+/* Dropdown Menu */
+.nav-profile-drowpdon {
+    position: absolute;
+    top: 38px;
+    right: 0;
+    background-color: #fff;
+    width: 180px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    display: none; /* hidden by default */
+    z-index: 200;
+}
+
+.nav-profile-drowpdon li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-profile-drowpdon li:hover {
+    background-color: #f6f6f6;
+}
+
+.nav-profile-drowpdon hr {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Show dropdown on hover */
+.navbar-profile:hover .nav-profile-drowpdon {
+    display: block;
+}

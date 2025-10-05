@@ -1,0 +1,98 @@
+.food-display {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.food-display h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.food-display h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff7b54, #ffb347);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Food items grid */
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,3fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Each food item card (from FoodItem component) */
+.food-item {
+  max-width: 350px;
+  max-height: 500px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.food-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.food-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.food-item-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.food-item-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.food-item-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.food-item-content .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ff7b54;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .food-display h2 {
+    font-size: 1.6rem;
+  }
+
+  .food-item img {
+    height: 150px;
+  }
+
+  .food-item-content h3 {
+    font-size: 1rem;
+  }
+}

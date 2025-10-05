@@ -1,0 +1,42 @@
+/* verify.css */
+
+.verify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #f3f3f3; /* Light grey background */
+  border-top: 10px solid #e63946; /* Red top border for spinning effect */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Optional: success / error messages */
+.verify-message {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.verify-message.success {
+  color: #28a745; /* green */
+}
+
+.verify-message.error {
+  color: #dc3545; /* red */
+}

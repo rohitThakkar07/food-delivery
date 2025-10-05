@@ -1,0 +1,94 @@
+/* Container for Add page */
+.add {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+/* Form styling */
+.add form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Flex column helper */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Flex row helper */
+.flex-c {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Upload Image section */
+.add-img-upload label {
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+
+.add-img-upload label:hover {
+  border-color: #007bff;
+}
+
+.add-img-upload img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Input, Textarea, Select styling */
+.add-product-name input,
+.add-product-description textarea,
+.add-category select,
+.add-price input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus,
+.add-category select:focus,
+.add-price input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0,123,255,0.2);
+}
+
+/* Button styling */
+.add-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
