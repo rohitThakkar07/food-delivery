@@ -1,10 +1,8 @@
 import orderModel from "../models/orderModel.js";
 import userModel from '../models/userModel.js';
 import Stripe from 'stripe';
-import 'dotenv/config';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
+const STRIPE_SECRET_KEY="sk_test_51RuQBTQax25UF8fadGttQNE77Ksm1gVIfFtxoB2xCw6UZCrIKvD5ZIZ4CZrce00McCdtBRVvoe89fgVPrdckkY4w00wPOtlKSf"
 // placing user order from frontend
 const placeOrder = async (req, res) => {
   const frontend_url = 'http://localhost:5173';
